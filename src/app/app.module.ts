@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { BoardComponent } from './board/board.component';
 import { SuccessComponent } from './success/success.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SuccessComponent } from './success/success.component';
     FormComponent,
     FormComponent,
     BoardComponent,
-    SuccessComponent
+    SuccessComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

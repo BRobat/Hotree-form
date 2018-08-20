@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit {
 
   desCharCount = 0;
+  employes = ["elo", "hey"];
 
   constructor() { }
 
