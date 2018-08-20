@@ -1,8 +1,8 @@
 <div class="container">
   <form>
 
-    <div id="about-form" class="form-container">
-      <h1 class="about-title">
+    <div id="about-form" class="form-container box-shadow">
+      <h1 id="about-title" class="title">
         About
       </h1>
 
@@ -37,7 +37,7 @@
         <select class="text-input wide" placeholder="Select category">
           <option *ngFor="let employe of employes" [value]="employe">{{employe}}</option>
         </select>
-        <label>
+        <label class="small-text">
           Describes topic and people who should be interested in this event
         </label>
       </div>
@@ -46,7 +46,7 @@
       <label id="payment-lbl" class="label-box field-lbl">
         PAYMENT
       </label>
-      <div id="payment-input" class="input-box">
+      <div id="payment-input" class="input-box normal-text">
         <input type="radio" name="money"> Free event
         <input type="radio" name="money"> Paid event
       </div>
@@ -56,8 +56,8 @@
         REWARD
       </label>
       <div id="reward-input" class="input-box">
-        <input type="number" placeholder="Number">
-        <label>
+        <input class="text-input" type="number" placeholder="Number">
+        <label class="normal-text">
           reward points for attendance
         </label>
       </div>
