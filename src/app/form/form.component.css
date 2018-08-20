@@ -1,61 +1,61 @@
 
 
-#about-form {
+.about-form {
     grid-template-rows: 50px 50px 150px 70px 50px
 }
 
-#about-title {
+.about-title {
     grid-column: 1 / 4;
     grid-row: 1;
 }
 
 
-#title-lbl {
+.title-lbl {
     grid-column: 1;
     grid-row: 2;
 }
 
-#title-input {
+.title-input {
     grid-column: 2 / 3;
     grid-row: 2;
 }
 
-#description-lbl {
+.description-lbl {
     grid-column: 1;
     grid-row: 3;
 }
 
-#description-input {
+.description-input {
     grid-column: 2 / 3;
     grid-row: 3;
 }
 
-#category-lbl {
+.category-lbl {
     grid-column: 1;
     grid-row: 4;
 }
 
-#category-input {
+.category-input {
     grid-column: 2 / 3;
     grid-row: 4;
 }
 
-#payment-lbl {
+.payment-lbl {
     grid-column: 1;
     grid-row: 5;
 }
 
-#payment-input {
+.payment-input {
     grid-column: 2;
     grid-row: 5;
 }
 
-#reward-lbl {
+.reward-lbl {
     grid-column: 1;
     grid-row: 6;
 }
 
-#reward-input {
+.reward-input {
     grid-column: 2;
     grid-row: 6;
 }

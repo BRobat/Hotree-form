@@ -1,12 +1,11 @@
-#blue {
+.blue {
     height: 65px;
     background-color: rgb(70, 90, 140);
-    margin: 0 0 0 0;
     
 }
 
-#bluer {
-    height: 10px;
+.bluer {
+    height: 12px;
     background-color: rgb(45, 61, 100);
-    margin: 0 0 0 0;
+
 }
