@@ -11,19 +11,18 @@ select {
     background-color: white;
     background: url(assets/arrow.svg) 98% / 15% no-repeat;
     background-size: 10px;
-
-    width: 100%;
+    /* resizing */
+    -ms-box-sizing:content-box; 
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    box-sizing:content-box;
  }
 
  textarea {
      resize: none;
  }
 
- input {
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none; 
- }
+
 
 
 .form-container {
@@ -62,6 +61,15 @@ select {
 
 .right{
     text-align: right;
+    float: right;
+    margin-right: -10px;
+}
+
+.no-appearance {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+     
 }
 
 .box-shadow {
@@ -72,6 +80,7 @@ select {
 
 .title {
     margin-left: 25px;
+    margin-right: 25px;
     padding-bottom: 40px;
 
     color: #001270;
@@ -80,7 +89,7 @@ select {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 
-    border-bottom-width: 2px;
+    border-bottom-width: 1.5px;
     border-bottom-color: #D9D9DA;
     border-bottom-style: solid;
 }
@@ -110,7 +119,9 @@ select {
 }
 
 .text-input {
-    padding: 7px;
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 2.5px;
     border-color: #DDDDDF;
     border-style: solid;

@@ -1,12 +1,12 @@
 <div class="container">
   <form>
 
-    <div  class="about-form form-container box-shadow">
-      <h1  class="about-title title">
+    <div class="about-form form-container box-shadow">
+      <h1 class="about-title title">
         About
       </h1>
 
-      <label  class="title-lbl label-box field-lbl">
+      <label class="title-lbl label-box field-lbl">
         TITLE
       </label>
       <div class="input-box title-input">
@@ -14,25 +14,28 @@
       </div>
 
 
-      <label  class="description-lbl label-box field-lbl">
+      <label class="description-lbl label-box field-lbl">
         DESCRIPTION
       </label>
-      <div  class="description-input input-box">
+      <div class="description-input input-box">
         <textarea class="wide tall text-input" type="text" rows="7" maxlength="140" placeholder="Write about your event, be creative"></textarea>
         <label class="small-text">
           max length 140 characters
         </label>
+
         <label class="small-text right">
           {{desCharCount}} / 140
         </label>
+
+
       </div>
 
 
-      <label  class="category-lbl label-box field-lbl">
+      <label class="category-lbl label-box field-lbl">
         CATEGORY
       </label>
-      <div  class="category-input input-box">
-        <select class="text-input">
+      <div class="category-input input-box">
+        <select class="text-input wide">
           <option *ngFor="let employe of employes" [value]="employe">{{employe}}</option>
         </select>
         <label class="small-text">
@@ -41,20 +44,20 @@
       </div>
 
 
-      <label  class="payment-lbl label-box field-lbl">
+      <label class="payment-lbl label-box field-lbl">
         PAYMENT
       </label>
-      <div  class="payment-input input-box normal-text">
+      <div class="payment-input input-box normal-text">
         <input type="radio" name="money"> Free event
         <input type="radio" name="money"> Paid event
       </div>
 
 
-      <label  class="reward-lbl label-box field-lbl">
+      <label class="reward-lbl label-box field-lbl">
         REWARD
       </label>
       <div class="reward-input input-box">
-        <input class="text-input short" type="number" placeholder="Number">
+        <input class="text-input short no-appearance" type="number" placeholder="Number">
         <label class="normal-text">
           reward points for attendance
         </label>
@@ -62,7 +65,7 @@
 
     </div>
 
-    <div  class="coordinator form-container">
+    <div class="coordinator form-container">
       <h1>
         Coordinator
       </h1>
@@ -83,7 +86,7 @@
 
     </div>
 
-    <div  class="when form-container">
+    <div class="when form-container">
       <h1>
         When
       </h1>
