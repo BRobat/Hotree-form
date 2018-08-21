@@ -1,6 +1,6 @@
 <div class="container">
   <form>
-
+    <!--  -->
     <div class="about-form form-container box-shadow">
       <h1 class="about-title title">
         About
@@ -64,39 +64,54 @@
       </div>
 
     </div>
-
-    <div class="coordinator form-container">
-      <h1>
+    <!--  -->
+    <div class="coordinator-form form-container box-shadow">
+      <h1 class="coordinator-title title">
         Coordinator
       </h1>
-      <br>
 
-      <div>
-        <label>
-          responsible:
-        </label>
-        <input>
-      </div>
-      <div>
-        <label>
-          email:
-        </label>
-        <input>
+      <label class="responsible-lbl label-box field-lbl">
+        RESPONSIBLE
+      </label>
+      <div class="responsible-input input-box">
+        <select class="text-input wide">
+          <option></option>
+        </select>
       </div>
 
+
+      <label class="email-lbl label-box field-lbl">
+        EMAIL
+      </label>
+      <div class="email-input input-box">
+        <input class="text-input wide" type="email" placeholder="Email">
+      </div>
     </div>
 
-    <div class="when form-container">
-      <h1>
+    <!--  -->
+    <div class="when-form form-container box-shadow">
+      <h1 class="when-title title">
         When
       </h1>
-      <br>
 
-      <div>
-        <label>
-          date:
+
+      <label class="date-lbl label-box field-lbl">
+        STARTS ON
+      </label>
+      <div class="date-input input-box">
+        <input class="text-input" type="date">
+        <label class="normal-text">
+          at
         </label>
-        <input>
+        <input class="text-input" type="time">
+        <input class="" type="radio"> 
+        <label class="normal-text">
+            AM
+        </label>
+        <input type="radio"> 
+        <label class="normal-text">
+          PM
+        </label>
       </div>
     </div>
   </form>

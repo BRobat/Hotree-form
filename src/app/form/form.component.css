@@ -1,7 +1,15 @@
 
 
 .about-form {
-    grid-template-rows: 50px 50px 150px 70px 50px
+    grid-template-rows: 50px 50px 150px 70px 50px;
+}
+
+.coordinator-form{
+    grid-template-rows: 50px 50px 70px;
+}
+
+.when-form {
+    grid-template-rows: 50px 50px 70px
 }
 
 .about-title {
@@ -63,3 +71,55 @@
 
 
 
+
+.coordinator-title {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+
+.responsible-lbl {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.responsible-input {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.email-lbl {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.email-input {
+    grid-column: 2 / 3;
+    grid-row: 3;
+}
+
+
+.when-title {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+.date-lbl {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.date-input {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.email-lbl {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.email-input {
+    grid-column: 2 / 3;
+    grid-row: 3;
+}
