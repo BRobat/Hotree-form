@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/Forms';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-form',
@@ -9,10 +12,18 @@ export class FormComponent implements OnInit {
 
   desCharCount = 0;
   employes = ["elo", "hey"];
+  loggedInUserId = 3
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onAddEvent(form: NgForm) {
+    const formOutput = form.value
+    console.log(form.value);
+
+    this.router.navigate(["success"])
   }
 
 }

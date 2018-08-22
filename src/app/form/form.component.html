@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form (ngSubmit)="onAddEvent(f)" #f="ngForm">
     <!--  -->
     <div class="about-form form-container box-shadow">
       <h1 class="about-title title">
@@ -10,7 +10,7 @@
         TITLE
       </label>
       <div class="input-box title-input">
-        <input class="text-input wide" type="text" placeholder="Make it short and clear">
+        <input class="text-input wide" type="text" placeholder="Make it short and clear" name="title" ngModel>
       </div>
 
 
@@ -18,7 +18,8 @@
         DESCRIPTION
       </label>
       <div class="description-input input-box">
-        <textarea class="wide tall text-input" type="text" rows="7" maxlength="140" placeholder="Write about your event, be creative"></textarea>
+        <textarea class="wide tall text-input" type="text" rows="7" maxlength="140" placeholder="Write about your event, be creative"
+          name="description" ngModel></textarea>
         <label class="small-text">
           max length 140 characters
         </label>
@@ -26,8 +27,6 @@
         <label class="small-text right">
           {{desCharCount}} / 140
         </label>
-
-
       </div>
 
 
@@ -35,7 +34,7 @@
         CATEGORY
       </label>
       <div class="category-input input-box">
-        <select class="text-input wide">
+        <select class="text-input wide" name="category" ngModel>
           <option *ngFor="let employe of employes" [value]="employe">{{employe}}</option>
         </select>
         <label class="small-text">
@@ -57,7 +56,7 @@
         REWARD
       </label>
       <div class="reward-input input-box">
-        <input class="text-input short no-appearance" type="number" placeholder="Number">
+        <input class="text-input short no-appearance" type="number" placeholder="Number" name="reward" ngModel>
         <label class="normal-text">
           reward points for attendance
         </label>
@@ -74,7 +73,7 @@
         RESPONSIBLE
       </label>
       <div class="responsible-input input-box">
-        <select class="text-input wide">
+        <select class="text-input wide" name="responsible" ngModel>
           <option></option>
         </select>
       </div>
@@ -84,7 +83,7 @@
         EMAIL
       </label>
       <div class="email-input input-box">
-        <input class="text-input wide" type="email" placeholder="Email">
+        <input class="text-input wide" type="email" placeholder="Email" name="email" ngModel>
       </div>
     </div>
 
@@ -99,20 +98,22 @@
         STARTS ON
       </label>
       <div class="date-input input-box">
-        <input class="text-input" type="date">
+        <input class="text-input" type="date" name="date" ngModel>
         <label class="normal-text">
           at
         </label>
-        <input class="text-input" type="time">
-        <input class="" type="radio"> 
+        <input class="text-input" type="time" name="time" ngModel>
+        <input class="" type="radio">
         <label class="normal-text">
-            AM
+          AM
         </label>
-        <input type="radio"> 
+        <input type="radio">
         <label class="normal-text">
           PM
         </label>
       </div>
     </div>
+
+    <button class="submit-button" type="submit">PUBLISH EVENT</button>
   </form>
 </div>
