@@ -9,7 +9,7 @@
 }
 
 .when-form {
-    grid-template-rows: 50px 50px 70px
+    grid-template-rows: 50px 70px 70px
 }
 
 .about-title {
@@ -114,12 +114,12 @@
     grid-row: 2;
 }
 
-.email-lbl {
+.duration-lbl {
     grid-column: 1;
     grid-row: 3;
 }
 
-.email-input {
+.duration-input {
     grid-column: 2 / 3;
     grid-row: 3;
 }

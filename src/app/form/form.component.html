@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)="onAddEvent(f)" #f="ngForm">
+  <form (ngSubmit)="onAddEvent(f)" #f="ngForm" ngNativeValidate>
     <!--  -->
     <div class="about-form form-container box-shadow">
       <h1 class="about-title title">
@@ -7,19 +7,19 @@
       </h1>
 
       <label class="title-lbl label-box field-lbl">
-        TITLE
+        TITLE <label class="red">*</label>
       </label>
       <div class="input-box title-input">
-        <input class="text-input wide" type="text" placeholder="Make it short and clear" name="title" ngModel>
+        <input class="text-input wide" type="text" placeholder="Make it short and clear" required name="title" ngModel>
       </div>
 
 
       <label class="description-lbl label-box field-lbl">
-        DESCRIPTION
+        DESCRIPTION <label class="red">*</label>
       </label>
       <div class="description-input input-box">
         <textarea class="wide tall text-input" type="text" rows="7" maxlength="140" placeholder="Write about your event, be creative"
-          name="description" ngModel></textarea>
+          required name="description" ngModel></textarea>
         <label class="small-text">
           max length 140 characters
         </label>
@@ -47,10 +47,11 @@
         PAYMENT
       </label>
       <div class="payment-input input-box normal-text">
-        <input type="radio" name="money"> Free event
-        <input type="radio" name="money"> Paid event
-      </div>
+        <input type="radio" name="money" value="free" (click)="show = false"> Free event
+        <input type="radio" name="money" value="paid" (click)="show = true"> Paid event
 
+        <input *ngIf="show" class="text-input short no-appearance" type="number" placeholder="Number" name="reward" ngModel>
+      </div>
 
       <label class="reward-lbl label-box field-lbl">
         REWARD
@@ -70,10 +71,10 @@
       </h1>
 
       <label class="responsible-lbl label-box field-lbl">
-        RESPONSIBLE
+        RESPONSIBLE <label class="red">*</label>
       </label>
       <div class="responsible-input input-box">
-        <select class="text-input wide" name="responsible" ngModel>
+        <select class="text-input wide" required name="responsible" ngModel>
           <option></option>
         </select>
       </div>
@@ -95,23 +96,37 @@
 
 
       <label class="date-lbl label-box field-lbl">
-        STARTS ON
+        STARTS ON <label class="red">*</label>
       </label>
       <div class="date-input input-box">
-        <input class="text-input" type="date" name="date" ngModel>
+        <input class="text-input" type="date" required name="date" ngModel>
         <label class="normal-text">
           at
         </label>
-        <input class="text-input" type="time" name="time" ngModel>
-        <input class="" type="radio">
+        <input class="text-input short" type="time" name="time" ngModel>
+        <div>
+          <input type="radio" value="am" name="ampm" checked >
+          <label class="normal-text">
+            AM
+          </label>
+          <input type="radio"  value="pm" name="ampm">
+          <label class="normal-text">
+            PM
+          </label>
+        </div>
+
+      </div>
+
+      <label class="duration-lbl label-box field-lbl">
+        DURATION
+      </label>
+      <div class="duration-input input-box">
+        <input class="text-input short" type="number" name="duration" ngModel>
         <label class="normal-text">
-          AM
-        </label>
-        <input type="radio">
-        <label class="normal-text">
-          PM
+          hour
         </label>
       </div>
+
     </div>
 
     <button class="submit-button" type="submit">PUBLISH EVENT</button>

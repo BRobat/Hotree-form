@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
-import { BoardComponent } from './board/board.component';
 import { SuccessComponent } from './success/success.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -13,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     FormComponent,
-    BoardComponent,
     SuccessComponent,
     NavbarComponent
   ],

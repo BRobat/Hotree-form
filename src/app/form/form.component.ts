@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/Forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   desCharCount = 0;
   employes = ["elo", "hey"];
   loggedInUserId = 3
+  show: boolean = false
 
   constructor(private router: Router) { }
 
@@ -22,6 +23,9 @@ export class FormComponent implements OnInit {
   onAddEvent(form: NgForm) {
     const formOutput = form.value
     console.log(form.value);
+
+
+
 
     this.router.navigate(["success"])
   }
